@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/datepicker.css">
+    <link rel="stylesheet" href="/stylesheets/lightgallery.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <script src="/javascripts/jquery-1.12.1.min.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/jquery.dataTables.min.js"></script>
+    <script src="/javascripts/dataTables.bootstrap.min.js"></script>
+    <script src="/javascripts/bootstrap-datepicker.js"></script>
+    
+    <title>Result</title>
+    <% include header.ejs %>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="lightgallery">
+         <div class="img" data-src="/uploads/<%=path_data.original_file %>" 
+         data-sub-html="<h4>Original Image</h4>">
+            <img src="/uploads/<%=path_data.original_file %>"/>
+            <div class="desc">Original Image</div>
+        </div>
+        <div class="img" data-src="/uploads/<%=path_data.gallery %>" 
+         data-sub-html="<h4>Gallery</h4>">
+            <img src="/uploads/<%=path_data.gallery %>"/>
+            <div class="desc">Gallery</div>
+        </div>
+        <div class="img" data-src="/uploads/<%=path_data.horizontal_small %>" 
+         data-sub-html="<h4>Horizontal Small</h4>">
+            <img src="/uploads/<%=path_data.horizontal_small %>"/>
+            <div class="desc">Horizontal Small</div>
+        </div>
+        <div class="img" data-src="/uploads/<%=path_data.vertical %>" 
+         data-sub-html="<h4>Vertical</h4>">
+            <img src="/uploads/<%=path_data.vertical %>"/>
+            <div class="desc">Vertical</div>
+        </div>
+        <div class="img" data-src="/uploads/<%=path_data.horizontal %>"
+        data-sub-html="<h4>Horizontal</h4>">
+            <img src="/uploads/<%=path_data.horizontal %>"/>
+            <div class="desc">Horizontal</div>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/lightgallery.js"></script>
+<script src="/javascripts/lg-thumbnail.js"></script>
+<script src="/javascripts/lg-fullscreen.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery({
+            selector: ".img"
+        }); 
+    });
+</script>
+</body>
+</html>

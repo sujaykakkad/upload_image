@@ -1,0 +1,17 @@
+{
+  "name": "upload_image_app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": { "start" : "node app.js" },
+  "dependencies": {
+    "async": "~2.0.1",
+    "body-parser": "^1.15.2",
+    "ejs": "~2.4.2",
+    "express": "~4.14.0",
+    "express-session": "~1.14.0",
+    "jimp": "^0.2.27",
+    "lightgallery": "^1.2.21",
+    "mkdirp": "~0.5.1",
+    "multer": "~1.1.0"
+  }
+}
